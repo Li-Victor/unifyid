@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'semantic-ui-react';
 
-import Section from './Section';
+import InfoSection from './InfoSection';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -70,17 +70,17 @@ class Dashboard extends React.Component {
       <Container>
         <h1>Hi {userInfo.name}, </h1>
         <h3>Username: {userInfo.username}</h3>
-        <Section
+        <InfoSection
           credentials={userInfo.own_credentials}
           deleteCredentials={this.deleteOwnCredentials}
           title="Own Credentials"
         />
-        <Section
+        <InfoSection
           credentials={userInfo.shared_with_me}
           deleteCredentials={this.deleteSharedWithMeCredentials}
           title="Shared With Me"
         />
-        <Section
+        <InfoSection
           credentials={userInfo.shared_with_others}
           deleteCredentials={this.deleteSharedWithOthersCredentials}
           title="Shared With Others"
